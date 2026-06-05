@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Grace Sutherland Photography</title>
+    <meta name="description" content="Book a portrait, couple, engagement, or family photography session with Grace Sutherland in Redding, California.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./img/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./CSS/gracesPhotography.css">
+    <link rel="stylesheet" href="./CSS/pages.css">
+</head>
+<body>
+
+    <!-- ============================================================
+         PAGE LOADER
+         ============================================================ -->
+    <div id="page-loader" class="page-loader">
+        <div class="loader-panel loader-panel--left"></div>
+        <div class="loader-panel loader-panel--right"></div>
+        <div class="loader-center">
+            <div class="loader-monogram">GS</div>
+            <div class="loader-divider"></div>
+            <div class="loader-name">Grace Sutherland</div>
+            <div class="loader-tag">Photography</div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         NAVIGATION
+         ============================================================ -->
+    <header class="header scrolled" id="header">
+        <nav class="nav">
+            <a href="./gracesPhotography.html" class="nav-logo">GS</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+            <li><a href="./gracesPhotography.html" class="nav-link">Home</a></li>
+            <li><a href="./about.html"             class="nav-link">About</a></li>
+            <li><a href="./services.html"          class="nav-link">Services</a></li>
+            <li><a href="./gracesPhotography.html#portfolio" class="nav-link">Portfolio</a></li>
+            <li><a href="./contact.html"           class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <main>
+
+        <!-- ============================================================
+             CONTACT HERO  (minimal, no image)
+             ============================================================ -->
+        <div class="contact-hero">
+            <span class="contact-hero__eyebrow">Let's Connect</span>
+            <h1 class="contact-hero__title">Book Your<br><em>Session</em></h1>
+            <p class="contact-hero__sub">Fill out the form below and I'll be in touch within 24 hours to talk about your vision.</p>
+        </div>
+
+        <!-- ============================================================
+             TESTIMONIALS STRIP  (social proof before the form)
+             ============================================================ -->
+        <div class="testimonials-strip">
+            <div class="testimonials-strip__inner">
+                <div class="strip-quote">
+                    <p class="strip-quote__text">"Booking Grace was the easiest decision we made. She responded within an hour and the whole process felt effortless."</p>
+                    <span class="strip-quote__author">— Tyler &amp; Hana</span>
+                </div>
+                <div class="strip-quote">
+                    <p class="strip-quote__text">"She made the entire experience so comfortable. From first message to final gallery, everything was seamless and stress-free."</p>
+                    <span class="strip-quote__author">— Makayla F.</span>
+                </div>
+                <div class="strip-quote">
+                    <p class="strip-quote__text">"Grace gets back to you quickly, explains everything clearly, and makes you feel cared for from day one. Highly recommend."</p>
+                    <span class="strip-quote__author">— The Johnson Family</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             CONTACT FORM + INFO
+             ============================================================ -->
+        <section class="contact contact-extended" id="contact">
+            <div class="contact-inner contact-extended-inner">
+
+                <!-- Form -->
+                <div class="contact-right">
+                    <form class="contact-form" id="contact-form" novalidate>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <input type="text" id="first-name" name="firstName" class="form-input" placeholder=" " required autocomplete="given-name">
+                                <label for="first-name" class="form-label">First Name</label>
+                            </div>
+                            <div class="form-field">
+                                <input type="text" id="last-name" name="lastName" class="form-input" placeholder=" " required autocomplete="family-name">
+                                <label for="last-name" class="form-label">Last Name</label>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <input type="email" id="email" name="email" class="form-input" placeholder=" " required autocomplete="email">
+                            <label for="email" class="form-label">Email Address</label>
+                        </div>
+
+                        <div class="form-field">
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder=" " autocomplete="tel">
+                            <label for="phone" class="form-label">Phone Number</label>
+                        </div>
+
+                        <div class="form-field">
+                            <select id="session-type" name="sessionType" class="form-input" style="cursor:pointer; appearance:none; -webkit-appearance:none;" required>
+                                <option value="" disabled selected></option>
+                                <option value="portrait">Portrait / Senior</option>
+                                <option value="couple">Couple</option>
+                                <option value="engagement">Engagement</option>
+                                <option value="family">Family</option>
+                                <option value="other">Other / Not Sure Yet</option>
+                            </select>
+                            <label for="session-type" class="form-label" style="pointer-events:none;">Session Type</label>
+                        </div>
+
+                        <div class="form-field">
+                            <input type="text" id="preferred-date" name="preferredDate" class="form-input" placeholder=" ">
+                            <label for="preferred-date" class="form-label">Preferred Date (or date range)</label>
+                        </div>
+
+                        <div class="form-field">
+                            <textarea id="message" name="message" class="form-input form-textarea" placeholder=" " rows="5" required></textarea>
+                            <label for="message" class="form-label">Tell me about your vision</label>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary btn--full">
+                            Send Message <i class="ri-send-plane-line"></i>
+                        </button>
+
+                    </form>
+                </div>
+
+                <!-- Info side -->
+                <div class="contact-left">
+                    <span class="section-eyebrow">Reach Out</span>
+                    <h2 class="section-title contact-title">Get in<br>Touch</h2>
+
+                    <ul class="contact-info">
+                        <li>
+                            <i class="ri-map-pin-line" aria-hidden="true"></i>
+                            <span>Redding, California</span>
+                        </li>
+                        <li>
+                            <i class="ri-phone-line" aria-hidden="true"></i>
+                            <a href="tel:15309455772">(530) 945-5772</a>
+                        </li>
+                        <li>
+                            <i class="ri-mail-line" aria-hidden="true"></i>
+                            <a href="mailto:gracesutherland@gmail.com">gracesutherland@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="ri-time-line" aria-hidden="true"></i>
+                            <span>Replies within 24 hours</span>
+                        </li>
+                    </ul>
+
+                    <div class="contact-socials">
+                        <a href="#" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                            <i class="ri-facebook-line"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter / X" target="_blank" rel="noopener">
+                            <i class="ri-twitter-x-line"></i>
+                        </a>
+                    </div>
+
+                    <!-- Sidebar testimonial -->
+                    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(244,241,237,0.08);">
+                        <i class="ri-double-quotes-l" style="color: rgba(244,241,237,0.18); font-size: 2rem; display:block; margin-bottom:1rem;"></i>
+                        <p style="font-family: var(--font-display); font-size: 1.05rem; font-style:italic; color: rgba(244,241,237,0.7); line-height:1.7; font-weight:300;">"Grace responded to my inquiry the same day and made everything feel so easy. I can't recommend her enough."</p>
+                        <span style="display:block; margin-top:1rem; font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(244,241,237,0.35);">— Emma R., Senior Portrait</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================================
+             BOOKING FAQ
+             ============================================================ -->
+        <section class="faq-section">
+            <div class="faq-header">
+                <span class="section-eyebrow">Before You Reach Out</span>
+                <h2 class="section-title">Quick Answers</h2>
+            </div>
+            <div class="faq-list">
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        What's the best way to contact you?
+                        <i class="ri-add-line faq-icon" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer" role="region">
+                        <p>The contact form above is the fastest way to reach me — I respond within 24 hours. You're also welcome to call or text me directly at (530) 945-5772.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        What information should I include?
+                        <i class="ri-add-line faq-icon" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer" role="region">
+                        <p>Tell me the type of session you're interested in, your preferred dates, and a little about your vision. The more I know, the better I can prepare to make your session perfect.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Do you require a deposit to book?
+                        <i class="ri-add-line faq-icon" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer" role="region">
+                        <p>Yes — a 25% non-refundable deposit is required to officially reserve your session date. The remaining balance is due the day of your session.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Can I reschedule after booking?
+                        <i class="ri-add-line faq-icon" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer" role="region">
+                        <p>Life happens! You can reschedule with at least 48 hours notice at no extra charge. Your deposit transfers to your new date.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Do you offer custom or mini sessions?
+                        <i class="ri-add-line faq-icon" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer" role="region">
+                        <p>Absolutely! I occasionally offer mini sessions and seasonal specials. The best way to hear about these is to reach out directly or follow me on social media where I announce them first.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">GS Photography</div>
+            <p class="footer-copy">&copy; 2024 Grace Sutherland Photography. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="./gracesPhotography.html">Home</a>
+                <a href="./about.html">About</a>
+                <a href="./services.html">Services</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+        <i class="ri-arrow-up-s-line"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="./JS/gracesPhotography.js" defer></script>
+
+</body>
+</html>
