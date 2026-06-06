@@ -144,7 +144,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
 
 // Active nav link based on current page filename
 (function setActiveLink() {
-    const currentFile = window.location.pathname.split('/').pop() || 'gracesPhotography.html';
+    const currentFile = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.nav-link').forEach(link => {
         const href = (link.getAttribute('href') || '').replace('./', '');
         const linkFile = href.split('#')[0].split('/').pop();
