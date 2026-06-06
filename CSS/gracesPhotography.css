@@ -44,7 +44,18 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-body::-webkit-scrollbar { display: none; }
+/* Scrollbar */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--sand) var(--cream);
+}
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb {
+    background: var(--sand);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--brown-mid); }
 
 img     { max-width: 100%; height: auto; display: block; }
 ul      { list-style: none; }
