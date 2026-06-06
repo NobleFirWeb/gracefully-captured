@@ -126,20 +126,21 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 // Mobile hamburger
-navToggle.addEventListener('click', () => {
-    const isOpen = navMenu.classList.toggle('open');
+function setMenuOpen(isOpen) {
+    navMenu.classList.toggle('open', isOpen);
     navToggle.classList.toggle('active', isOpen);
     navToggle.setAttribute('aria-expanded', String(isOpen));
     document.body.style.overflow = isOpen ? 'hidden' : '';
-});
+    // backdrop-filter on the header creates a containing block that clips
+    // position:fixed children — disable it while the overlay is open
+    header.style.backdropFilter         = isOpen ? 'none' : '';
+    header.style.webkitBackdropFilter   = isOpen ? 'none' : '';
+}
+
+navToggle.addEventListener('click', () => setMenuOpen(!navMenu.classList.contains('open')));
 
 document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('open');
-        navToggle.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-    });
+    link.addEventListener('click', () => setMenuOpen(false));
 });
 
 // Active nav link based on current page filename
